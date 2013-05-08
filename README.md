@@ -2,6 +2,12 @@
 使い方
 =====
 
+準備
+----
+
+    $ git clone https://github.com/ajiyoshi-vg/temp_test.git
+    ....
+    $ cd temp_test
 
 最新版の msgpack-php を使う場合
 ---- 
@@ -73,7 +79,7 @@ git clone してきて、コンパイルします
     Zend Extension Api No:   220100525
     configure: WARNING: You will need re2c 0.13.4 or later if you want to regenerate PHP parsers.
     make -C msgpack-php 2>&1 > /dev/null
-    cat req.msgpack | php -d extension=./msgpack-php/modules/msgpack.so dump.php
+    cat req.msgpack | php dump.php
     array(3) {
       ["version"]=>
       int(1)
@@ -111,6 +117,6 @@ git clone してきて、コンパイルします
         string(1) "F"
       }
     }
-    cat res.msgpack | php -d extension=./msgpack-php/modules/msgpack.so dump.php
+    cat res.msgpack | php dump.php
     PHP Warning:  [msgpack] (php_msgpack_unserialize) Extra bytes in /home/ajiyoshi/project/0508/adnite/dump.php on line 3
     int(-17)
